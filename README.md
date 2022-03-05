@@ -1,6 +1,8 @@
 # reaction-timer
+A simple reaction timer built with Vue.js
 
 ## Project setup
+First, go into the directory of the project, then run the next two commands. The last one will only need to be ran if you are deploying to production.
 ```
 npm install
 ```
