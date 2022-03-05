@@ -1,8 +1,10 @@
-# reaction-timer
-A simple reaction timer built with Vue.js
+# Flash Reaction Timer
+A small reaction timer called "Flash - Reaction Timer" built using Vue.js.
+Hosted on Netlify [here](https://flash-reaction-timer.netlify.app).
 
 ## Project setup
-First, go into the directory of the project, then run the next two commands. The last one will only need to be ran if you are deploying to production.
+First, go into the directory of the project and run the next two commands. The last one will only need to be ran if you are deploying to production.
+
 ```
 npm install
 ```

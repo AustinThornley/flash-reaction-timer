@@ -1,5 +1,5 @@
 <template>
-	<h1>Reaction Timer</h1>
+	<h1><span class="flash">Flash</span> Reaction Timer</h1>
 	<button @click="init" v-show="!isPlaying">Start Game</button>
 	<Area v-show="isPlaying" :delay="delay" />
 </template>
@@ -33,5 +33,10 @@ export default {
   text-align: center;
   color: #444;
   margin-top: 60px;
+}
+.flash {
+	color: green;
+	font-style: italic;
+	font-size: 150%;
 }
 </style>
