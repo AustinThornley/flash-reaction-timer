@@ -1,5 +1,5 @@
-# Flash Reaction Timer
-A small reaction timer called "Flash - Reaction Timer" built using Vue.js.
+# Flash! - Reaction Timer
+A small reaction timer called "Flash! - Reaction Timer" built using Vue.js. (Project is still a work in progress)
 Hosted on Netlify [here](https://flash-reaction-timer.netlify.app).
 
 ## Project setup
