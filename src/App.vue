@@ -57,8 +57,11 @@ export default {
 	display: flex;
 	justify-content: center;
 }
+
 .game {
-	background: rgb(199, 199, 199);
+	background: rgb(232, 232, 232);
+	border-radius: 5px;
+	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -66,15 +69,18 @@ export default {
 	min-height: 450px;
 	min-width: 679px;
 }
+
 h1 {
 	font-size: 2.5rem;
 	padding: 0 5rem 1rem 5rem;
 }
+
 .flash {
 	color: green;
 	font-style: italic;
 	font-size: 150%;
 }
+
 button {
 	font-family: inherit;
 	font-size: .95rem;
@@ -90,11 +96,14 @@ button {
 	margin: 0 auto;
 	margin-bottom: 5rem;
 }
+
 button:hover {
 	transform: translateY(-3px);
 	transition: 0.4s all;
 	background: #007300;
 }
+
+/* Mobile Styles */
 @media only screen and (max-width: 750px) {
 	h1 {
 		padding: 0 1rem .5rem 1rem;
@@ -103,6 +112,7 @@ button:hover {
 		min-width: 400px;
 	}
 }
+
 @media only screen and (max-width: 575px) {
 	h1 {
 		font-size: 1.25rem;
