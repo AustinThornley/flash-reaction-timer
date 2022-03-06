@@ -95,4 +95,25 @@ button:hover {
 	transition: 0.4s all;
 	background: #007300;
 }
+@media only screen and (max-width: 750px) {
+	h1 {
+		padding: 0 1rem .5rem 1rem;
+	}
+	.game {
+		min-width: 400px;
+	}
+}
+@media only screen and (max-width: 575px) {
+	h1 {
+		font-size: 1.25rem;
+		padding: 0;
+	}
+	button {
+		font-size: .75rem;
+		padding: .75rem;
+	}
+	.game {
+		min-width: 300px;
+	}
+}
 </style>

@@ -50,4 +50,14 @@ export default {
 	transition: 0.4s all;
 	background: #007300;
 }
+@media only screen and (max-width: 750px) {
+	.area {
+		max-width: 300px;
+	}
+}
+@media only screen and (max-width: 575px) {
+	.area {
+		max-width: 200px;
+	}
+}
 </style>
