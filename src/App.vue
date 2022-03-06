@@ -1,9 +1,12 @@
 <template>
-	<h1><span class="flash">Flash! - </span> Reaction Timer</h1>
-	<button @click="init" :disabled="isPlaying">Start Game</button>
-	<Area v-if="isPlaying" :delay="delay" @stop="stopGame"/>
-	<!-- To-Do: convert score from ms to seconds -->
-	<Stats v-if="gameEnded" :score="score"></Stats>
+	<div class="game">
+			<h1 v-show="!isPlaying"><span class="flash">Flash! - </span> Reaction Timer</h1>
+			<button @click="init" v-if="!isPlaying && !gameEnded">Start Game</button>
+			<button @click="restart" v-if="!isPlaying && gameEnded">Restart Game</button>
+			<Area v-if="isPlaying" :delay="delay" @stop="stop"/>
+			<!-- To-Do: convert score from ms to seconds -->
+			<Stats v-if="gameEnded" :score="score"></Stats>
+	</div>
 </template>
 
 <script>
@@ -26,10 +29,13 @@ export default {
 			this.delay = 2000 + Math.random() * 5000;
 			this.isPlaying = true;
 		},
-		stopGame(reactionTime) {
+		stop(reactionTime) {
 			this.score = reactionTime;
 			this.isPlaying = false;
 			this.gameEnded = true;
+		},
+		restart() {
+			location.reload();
 		}
 	},
 	mounted() {
@@ -48,10 +54,45 @@ export default {
   text-align: center;
   color: #444;
   margin-top: 60px;
+	display: flex;
+	justify-content: center;
+}
+.game {
+	background: rgb(199, 199, 199);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 450px;
+	min-width: 679px;
+}
+h1 {
+	font-size: 2.5rem;
+	padding: 0 5rem 1rem 5rem;
 }
 .flash {
 	color: green;
 	font-style: italic;
 	font-size: 150%;
+}
+button {
+	font-family: inherit;
+	font-size: .95rem;
+	background: green;
+	color: white;
+	border: none;
+	border-radius: 11px;
+	padding: 1rem;
+	cursor: pointer;
+	transition: 0.4s all;
+	overflow: hidden;
+	max-width: 25%;
+	margin: 0 auto;
+	margin-bottom: 5rem;
+}
+button:hover {
+	transform: translateY(-3px);
+	transition: 0.4s all;
+	background: #007300;
 }
 </style>

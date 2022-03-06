@@ -43,5 +43,11 @@ export default {
 	text-align: center;
 	padding: 100px 0;
 	margin: 40px auto;
+	transition: 0.4s all;
+	cursor: pointer;
+}
+.area:hover {
+	transition: 0.4s all;
+	background: #007300;
 }
 </style>
